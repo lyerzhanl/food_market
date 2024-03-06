@@ -31,7 +31,7 @@ export default class AdminService {
         return api.post('/create_history', { productId, userId, quantity })
     }
     static async updateUser(userId, email, name, phone, role) {
-        return api.put(`/admin/${userId}`, {email, name, phone, role})
+        return api.patch(`/admin/${userId}`, {email, name, phone, role})
     }
     static async updateProduct(productId, productName, categoryId, price, quantity, type, photoUrl) {
         return api.put('/update-product', { productId, productName, categoryId, price, quantity, type, photoUrl })
@@ -46,7 +46,7 @@ export default class AdminService {
         return api.delete(`/user/delete/${userId}`)
     }
     static async deleteProduct(productId) {
-        return api.delete(`/delete_product/${productId}`)
+        return api.delete(`/delete-product/${productId}`)
     }
     static async deleteCategory(categoryId) {
         return api.delete(`/delete_category/${categoryId}`)

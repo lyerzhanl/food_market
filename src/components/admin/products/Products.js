@@ -19,6 +19,7 @@ const Products = () => {
     const [editModes, setEditModes] = useState(Array(products.length).fill(true));
     const [isActive, setIsActive] = useState(false);
     const [isConfirm, setIsConfirm] = useState(false);
+    const [deleteProductId, setDeleteProductId] = useState(null);
 
     // Temporary state for changes during editing
     const [tempProductId, setTempProductId] = useState(0);
@@ -109,11 +110,8 @@ const Products = () => {
     }
 
     const handleDelete = (index) => {
-        setProducts(prevProducts => {
-            const updatedProducts = [...prevProducts];
-            updatedProducts.splice(index, 1);
-            return updatedProducts;
-        });
+        setDeleteProductId(index)
+        setIsConfirm(!isConfirm)
     }
 
     const handleCreate = () => {
@@ -121,9 +119,17 @@ const Products = () => {
     }
 
     const handleSubmit = () => {
-        adminController.adminController.deleteProduct();
-        setIsConfirm(!isConfirm);
+        console.log(deleteProductId);
+        adminController.adminController.deleteProduct(deleteProductId).then(() => {
+            setIsConfirm(false);
+            setDeleteProductId(null);
+        });
     }
+
+    const handleCancelDelete = () => {
+        setIsConfirm(false);
+        setDeleteProductId(null);
+    };
 
     return (
         <>
@@ -164,7 +170,7 @@ const Products = () => {
                                              onClick={() => handleEdit(index)}/>
                         </div>
                         <div>
-                            <FontAwesomeIcon className={""} icon={faTrashCan} onClick={() => setIsConfirm(!isConfirm)}/>
+                            <FontAwesomeIcon className={""} icon={faTrashCan} onClick={() => handleDelete(product.productId)}/>
                         </div>
                     </div>
                 ))}
@@ -173,8 +179,8 @@ const Products = () => {
                 <div className="modal-content">
                     <h1 className="header__primary">Are you Sure about dat?</h1>
                     <div className="modal-btn-wrapper">
-                        <button type="submit" onClick={handleSubmit}>Yes</button>
-                        <button type="submit" onClick={handleSubmit}>No</button>
+                        <button type="submit" onClick={() => handleSubmit()}>Yes</button>
+                        <button type="submit" onClick={() => handleCancelDelete()}>No</button>
                     </div>
                 </div>
             </div>

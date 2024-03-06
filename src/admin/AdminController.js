@@ -134,13 +134,15 @@ export default class AdminController {
     async deleteUser(userId) {
         try {
             await AdminService.deleteUser(userId);
+            window.location.reload();
         } catch (e) {
             console.log(e);
         }
     }
-    async deleteProduct() {
+    async deleteProduct(productId) {
         try {
-            await AdminService.deleteProduct();
+            await AdminService.deleteProduct(productId);
+            window.location.reload();
         } catch (e) {
             console.log(e);
         }
