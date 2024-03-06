@@ -74,6 +74,7 @@ const App = () => {
                     <Route path="/registration" element={<Register />} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/admin" element={<Admin />} />
+                    <Route path="/profile/" element={<Cabinet />} />
                 </Routes>
                 <RenderFooter />
             </Router>

@@ -63,7 +63,7 @@ const Navbar = (props) => {
                     </li>
                     {
                         parsedToken
-                            ? <li><Link to="/cabinet">Cabinet</Link></li>
+                            ? <li><Link to="/profile">Cabinet</Link></li>
                             : <li><Link to="/login">Cabinet</Link></li>
                     }
                     {
