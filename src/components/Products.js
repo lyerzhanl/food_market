@@ -8,7 +8,7 @@ const Products = () => {
     // This function will be called when the component mounts
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4001/products');
+        const response = await fetch('http://localhost:4001/hero-products');
         const data = await response.json();
         setProducts(data);
         console.log(data);
@@ -19,12 +19,6 @@ const Products = () => {
 
     fetchData();
   }, []);
-
-  //   const features = [
-  //     { img: img1, title: 'Cabbage', price: 1500, type: 'piece' },
-  //     { img: img2, title: 'Potato', price: 140, type: 'kg' },
-  //     { img: img3, title: 'Tomato', price: 1000, type: 'kg' },
-  //   ];
 
   return (
     <div className="products">
@@ -39,7 +33,7 @@ const Products = () => {
             </div>
             <p className="product-title">{product.productName}</p>
             <p className="product-price">
-              {product.price + 'tg / '} {product.type}
+              {product.price + ' tg / '} {product.type}
             </p>
           </div>
         ))}

@@ -13,6 +13,9 @@ export default class AdminService {
         return api.get('/histories')
     }
 
+    static async fetchCategories() {
+        return api.get('/categories')
+    }
     static async fetchUser(userId) {
         return api.get(`/profile/${userId}`)
     }
@@ -22,7 +25,7 @@ export default class AdminService {
     }
 
     static async createCategory(categoryName) {
-        return api.post('/create_category', { categoryName })
+        return api.post('/create-category', { categoryName })
     }
     static async createProduct( productName, categoryId, price, quantity, type, photoUrl ) {
         return api.post('/create-product', { productName, categoryId, price, quantity, type, photoUrl })
@@ -49,7 +52,7 @@ export default class AdminService {
         return api.delete(`/delete-product/${productId}`)
     }
     static async deleteCategory(categoryId) {
-        return api.delete(`/delete_category/${categoryId}`)
+        return api.delete(`/delete-category/${categoryId}`)
     }
     static async deleteHistory(historyId) {
         return api.delete('delete_history', { historyId })

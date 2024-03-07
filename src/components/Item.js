@@ -9,7 +9,7 @@ class Item extends Component {
             <div className="item">
                 <img src={potato} alt={item.productName} />
                 <h2>{item.productName}</h2>
-                <b>{item.price + " "}</b>
+                <b>{item.price + " tg"}</b>
                 <div
                     className="add-to-cart"
                     onClick={() => {

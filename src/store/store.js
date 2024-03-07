@@ -49,14 +49,9 @@ export default class Store {
         }
     }
 
-
-
-
     async registerUser(email, name, phone, password){
         try {
-            console.log('registerge kirdi')
             const response = await AuthService.registration(email, name, phone, password);
-            console.log('kerek jer ', response)
         } catch (e) {
             console.log('Ошибка в store.js : ', e)
         }
@@ -74,14 +69,9 @@ export default class Store {
         }
     }
 
-    // async checkAuth() {
+    // async isAuthorized() {
     //     try {
-    //         const response = await axios.get(`${API_URL}/refresh`, {withCredentials: true})
-    //         localStorage.setItem('token', this.userData)
-    //         this.setAuth(true)
-    //         this.setUserData(response)
-    //     } catch (e) {
-    //         console.log(e)
+    //
     //     }
     // }
 }

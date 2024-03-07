@@ -1,7 +1,7 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {FaShoppingCart} from 'react-icons/fa';
 import Order from './Order';
-import {Link} from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import {Context} from "../index";
 import {observer} from "mobx-react-lite";
 import {reaction} from "mobx";
@@ -17,7 +17,7 @@ const showOrders = (props) => {
             {props.orders.map((e) => (
                 <Order onDelete={props.onDelete} key={e.id} item={e}/>
             ))}
-            <p className="sum">Total: {new Intl.NumberFormat().format(total)}$</p>
+            <p className="sum">Total: {new Intl.NumberFormat().format(total)} tg</p>
         </div>
     );
 };
@@ -32,23 +32,11 @@ const showNothing = () => {
 };
 
 
-
 const Navbar = (props) => {
     const token = localStorage.getItem('token');
     const parsedToken = JSON.parse(token);
     const store = useContext(Context);
-    console.log(store.store.userData)
-    const isAuthorizedReaction = reaction(
-        () => store.store.isAuthorized,
-        (isAuthorized) => {
-            if (isAuthorized) {
-                console.log('authorized :' , isAuthorized)
-            } else {
-                console.log('Not authenticated:', isAuthorized);
-            }
-        }
-    );
-
+    const navigate = useNavigate();
     let [cartOpen, setCartOpen] = useState(false);
     return (
         <nav>
@@ -67,15 +55,16 @@ const Navbar = (props) => {
                             : <li><Link to="/login">Cabinet</Link></li>
                     }
                     {
-                        parsedToken
-                            ? <li><Link to="" onClick={() => store.store.logout()}>Log Out</Link></li>
-                            : ''
-                    }
-                    {
-                            store.store.userRole === 'ADMIN'
+                        store.store.userRole === 'ADMIN' || (parsedToken && parsedToken.role === 'ADMIN')
+
                             ? <li>
                                 <Link to="/admin">Control Panel</Link>
                             </li>
+                            : ''
+                    }
+                    {
+                        parsedToken
+                            ? <li><Link to="/login" onClick={() => store.store.logout()}>Log Out</Link></li>
                             : ''
                     }
 

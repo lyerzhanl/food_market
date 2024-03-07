@@ -773,7 +773,7 @@ textarea::-webkit-scrollbar-thumb {
 
 /* All Products Section*/
 .allProducts-wrapper .categories {
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .allProducts-wrapper main {
@@ -1107,4 +1107,26 @@ textarea::-webkit-scrollbar-thumb {
     color: #222222;
     text-align: center;
     font: 20px 'Montserrat';
+}
+
+.search-bar {
+    display: flex;
+    padding-top: 100px;
+}
+
+.search-bar p {
+    margin-right: 50px;
+}
+
+.search-bar input {
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font: 16px 'Montserrat';
+}
+
+.categories p {
+    margin-right: 100px;
 }

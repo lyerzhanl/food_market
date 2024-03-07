@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AllProducts from './pages/AllProducts';
@@ -9,20 +9,22 @@ import RenderNav from './helpers/RenderNav';
 import LogIn from './pages/LogIn';
 import Register from './pages/Register';
 import Admin from './pages/Admin';
-import {observer} from 'mobx-react-lite';
-import {Context} from "./index";
+import { observer } from 'mobx-react-lite';
+import { Context } from "./index";
+import order from "./components/Order";
 
 const App = () => {
     const [orders, setOrders] = useState([]);
     const [currentItems, setCurrentItems] = useState([]);
     const [serveritems, setServeritems] = useState([]);
     const [serverCategories, setServerCategories] = useState([]);
+    const [renderNav, setRenderNav] = useState(false); // Состояние для отслеживания рендеринга RenderNav
     const store = useContext(Context);
 
     useEffect(() => {
         Promise.all([
             fetch('http://localhost:4001/categories').then((response) => response.json()),
-            fetch('http://localhost:4001/products').then((response) => response.json()),
+            fetch('http://localhost:4001/hero-products').then((response) => response.json()),
         ])
             .then(([categories, products]) => {
                 console.log('categories: ', categories, '\n products: ', products)
@@ -30,7 +32,7 @@ const App = () => {
                 setCurrentItems(products);
                 setServerCategories(categories);
             })
-            .catch((error) => console.error('Error fetching data:', error));
+            .catch((error) => console.error('Error fetching data:', error))
     }, [store]);
 
     const chooseCategory = (categoryId) => {
@@ -43,11 +45,12 @@ const App = () => {
     };
 
     const deleteOrder = (id) => {
-        setOrders((prevOrders) => prevOrders.filter((e) => e.ID !== id));
+        setOrders((prevOrders) => prevOrders.filter((order) => order.productId !== id));
     };
 
     const addToOrder = (item) => {
-        const isInArray = orders.some((e) => e.ID === item.ID);
+        console.log(item);
+        const isInArray = orders.some((e) => e.ID === item.productId);
         if (!isInArray) {
             setOrders((prevOrders) => [...prevOrders, item]);
         }
@@ -56,7 +59,7 @@ const App = () => {
     return (
         <div className="wrapper">
             <Router>
-                <RenderNav onDelete={deleteOrder} orders={orders} />
+               <RenderNav onDelete={deleteOrder} orders={orders} />
                 <Routes>
                     <Route
                         path="/"
@@ -69,7 +72,7 @@ const App = () => {
                             />
                         }
                     />
-                    <Route path="/products" element={<AllProducts />} />
+                    <Route path="/products" element={<AllProducts onAdd={addToOrder} orders={orders} />} />
                     <Route path="/login" element={<LogIn />} />
                     <Route path="/registration" element={<Register />} />
                     <Route path="/contacts" element={<Contacts />} />

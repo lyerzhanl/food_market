@@ -5,9 +5,7 @@ import Admin from "../pages/Admin";
 export default class AdminController {
     allUsers;
     products;
-    allCategories = [];
-    histories = [];
-    history = {};
+    allCategories;
     singleUser = {};
 
     constructor() {
@@ -45,6 +43,16 @@ export default class AdminController {
             console.log(e)
         }
     }
+
+    async getAllCategories() {
+        try {
+            const response = await AdminService.fetchCategories();
+            this.setAllCategories(response);
+            console.log(this.allCategories)
+        } catch (e) {
+            console.log(e);
+        }
+    }
     async getAllProducts() {
         try {
             const response = await AdminService.fetchProducts();
@@ -80,9 +88,10 @@ export default class AdminController {
         }
     }
 
-    async createCategory() {
+    async createCategory(categoryName) {
         try {
-            await AdminService.createCategory();
+            await AdminService.createCategory(categoryName);
+            window.location.reload();
         }catch (e) {
             console.log(e);
         }
@@ -90,6 +99,7 @@ export default class AdminController {
     async CreateProduct( productName, categoryId, price, quantity, type, photoUrl ) {
         try {
             await AdminService.createProduct( productName, categoryId, price, quantity, type, photoUrl );
+            window.location.reload();
         } catch (e) {
             console.log(e)
         }
@@ -105,6 +115,7 @@ export default class AdminController {
     async updateUser(userId, email, name, phone, role) {
         try {
             await AdminService.updateUser(userId, email, name, phone, role);
+            window.location.reload();
         } catch (e) {
             console.log(e);
         }
@@ -112,6 +123,7 @@ export default class AdminController {
     async updateProduct(productId, productName, categoryId, price, quantity, type, photoUrl) {
         try {
             await AdminService.updateProduct(productId, productName, categoryId, price, quantity, type, photoUrl );
+            window.location.reload();
         } catch (e) {
             console.log(e);
         }
@@ -119,6 +131,7 @@ export default class AdminController {
     async updateCategory() {
         try {
             await AdminService.updateCategory();
+            window.location.reload();
         }catch (e) {
             console.log(e);
         }
@@ -148,9 +161,10 @@ export default class AdminController {
         }
     }
 
-    async deleteCategory() {
+    async deleteCategory(categoryId) {
         try {
-            await AdminService.deleteCategory();
+            await AdminService.deleteCategory(categoryId);
+            window.location.reload();
         } catch (e) {
             console.log(e);
         }

@@ -10,20 +10,6 @@ const LogIn = () => {
     const store = useContext(Context);
     const navigate = useNavigate();
 
-    // const recoverPass = () => {
-    //
-    // }
-
-    const isAuthorizedReaction = reaction(
-        () => store.store.isAuthorized,
-        (isAuthorized) => {
-            if (isAuthorized) {
-                return console.log('a')
-            }
-            console.log('blyaaaaaaa');
-        }
-    );
-
     return (
         <div className="auth-box">
             <div className="auth-form-outer">
