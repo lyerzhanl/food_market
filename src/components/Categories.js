@@ -12,7 +12,7 @@ export class Categories extends Component {
     fetch('http://localhost:4001/categories')
       .then((response) => response.json())
       .then((data) => {
-        const updatedCategories = [{ ID: 0, categoryName: 'All' }, ...data];
+        const updatedCategories = [{ categoryId: 0, categoryName: 'All' }, ...data];
         this.setState({ categories: updatedCategories });
         this.checkOverflow();
       })
@@ -33,7 +33,7 @@ export class Categories extends Component {
           {this.state.categories.map((e) => (
               <div
                   key={e.categoryName}
-                  onClick={() => this.props.chooseCategory(e.ID)}
+                  onClick={() => this.props.chooseCategory(e.categoryId)}
               >
                 {e.categoryName}
               </div>

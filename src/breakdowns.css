@@ -1,0 +1,86 @@
+@import "index.css";
+
+@media(max-width: 1024px) {
+    html {
+        font-size: 62.5%;
+    }
+    .product .product-img-wrapper img {
+        display: block;
+        margin: 0 auto;
+        transform: scale(0.3);
+        transition: 0.5s ease;
+    }
+
+    .product:hover .product-img-wrapper img {
+        transform: scale(0.35);
+    }
+}
+
+@media(max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media(max-width: 425px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 1.5rem;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    ul.nav {
+        position: absolute;
+        right: -2.5rem;
+        top: 0;
+        z-index: 10;
+        height: 70rem;
+        padding-top: 3.25rem;
+    }
+    .shop-cart-button {
+        font-size: 2rem;
+        z-index: 1000;
+        position: relative;
+        right: 3.75rem;
+    }
+    nav ul.nav li {
+        display: block;
+        /*transform: translateX(200%);*/
+        transition: .5s ease;
+    }
+    .links-wrapper li {
+        padding-bottom: 5rem;
+    }
+    nav .logo a {
+        font-size: 2rem;
+    }
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        pointer-events: auto;
+        margin-left: 3.75rem;
+    }
+
+
+
+
+
+
+    /*header .presentation {*/
+    /*    margin: 3.125rem 0; !* 50px / 16px = 3.125rem *!*/
+    /*    width: 100%;*/
+    /*    height: 31.25rem; !* 500px / 16px = 31.25rem *!*/
+    /*    background-size: cover;*/
+    /*    background-blend-mode: multiply;*/
+    /*    background: #bcbcbc url(img/hero-banner.webp) no-repeat center;*/
+    /*    background-size: cover;*/
+    /*    position: relative;*/
+    /*}*/
+    /*.product {*/
+    /*    width: 30%; !* 30% / 16 *!*/
+    /*    border: 0.1875rem solid #f2f2f2; !* 3px / 16 *!*/
+    /*    border-radius: 0.625rem; !* 10px / 16 *!*/
+    /*    cursor: pointer;*/
+    /*    margin-bottom: 3.125rem; !* 50px / 16 *!*/
+    /*}*/
+}

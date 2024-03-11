@@ -13,16 +13,8 @@ body {
     font-weight: 300;
 }
 
-
-.log {
-    /*background-image: url('./img/auth_bg.jpg');*/
-    /*background-position: center;*/
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
-}
-
 .wrapper {
-    width: 1280px;
+    width: 80rem;
     margin: 0 auto;
 }
 
@@ -32,12 +24,12 @@ header {
 
 nav {
     position: relative;
-    padding: 50px 0;
+    padding: 3.125rem 0;
 }
 
 nav .logo a {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #222;
     text-decoration: none;
 }
@@ -49,7 +41,7 @@ nav ul.nav {
 
 nav ul.nav li {
     display: inline;
-    margin-left: 25px;
+    margin-left: 1.5625rem;
     cursor: pointer;
 }
 
@@ -77,37 +69,37 @@ nav .shop-cart-button.active {
 
 nav .shop-cart {
     position: absolute;
-    top: 100px;
+    top: 6.25rem;
     right: 0;
-    width: 450px;
+    width: 28.125rem;
     background: #fafafa;
-    -webkit-box-shadow: 4px 5px 15px -7px #606060;
-    box-shadow: 4px 5px 15px -7px #606060;
+    -webkit-box-shadow: 0.25rem 0.3125rem 0.9375rem -0.4375rem #606060;
+    box-shadow: 0.25rem 0.3125rem 0.9375rem -0.4375rem #606060;
     z-index: 1000;
 
-    padding: 20px 20px 0;
+    padding: 1.25rem 1.25rem 0;
 }
 
 nav .shop-cart .empty h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 nav .shop-cart .item {
     width: 100%;
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 nav .shop-cart .item img {
-    width: 70px;
+    width: 4.375rem;
     float: left;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 nav .shop-cart .item h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
 }
 
 nav .shop-cart .item p {
@@ -119,7 +111,7 @@ nav .shop-cart .item .delete-icon {
     color: #ff7800;
     float: right;
     position: relative;
-    top: -25px;
+    top: -1.5625rem;
     cursor: pointer;
     transition: .5s ease;
 }
@@ -133,14 +125,14 @@ nav .shop-cart .sum {
     float: left;
     width: 100%;
     font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 header .presentation {
-    margin: 50px 0;
+    margin: 3.125rem 0;
     width: 100%;
-    height: 500px;
+    height: 31.25rem;
     background-size: cover;
     background-blend-mode: multiply;
     background: #bcbcbc url(img/hero-banner.webp) no-repeat center;
@@ -150,10 +142,10 @@ header .presentation {
 header .presentation::after {
     content: "Fresh and Organic Products";
     position: absolute;
-    top: 150px;
-    left: 50px;
-    width: 300px;
-    font-size: 40px;
+    top: 9.375rem;
+    left: 3.125rem;
+    width: 18.75rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #fff;
 }
@@ -161,25 +153,25 @@ header .presentation::after {
 header .presentation::before {
     content: "At low cost";
     position: absolute;
-    top: 305px;
-    left: 50px;
-    width: 300px;
-    font-size: 15px;
+    top: 19.0625rem;
+    left: 3.125rem;
+    width: 18.75rem;
+    font-size: 0.9375rem;
     font-weight: 300;
     color: #fff;
 }
 
 header .presentation .hero-shop-button {
-    padding: 10px;
-    font-size: 14px;
+    padding: 0.625rem;
+    font-size: 0.875rem;
     position: absolute;
-    bottom: 125px;
-    left: 50px;
+    bottom: 7.8125rem;
+    left: 3.125rem;
     color: #fff;
-    border: 1px solid #fff;
+    border: 0.0625rem solid #fff;
     background-color: transparent;
     transition: .5s ease;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 header .presentation .hero-shop-button:hover {
@@ -190,7 +182,7 @@ header .presentation .hero-shop-button:hover {
 
 /* Features */
 .features {
-    padding: 100px 0;
+    padding: 6.25rem 0;
 }
 
 .header__primary {
@@ -198,7 +190,7 @@ header .presentation .hero-shop-button:hover {
 }
 
 .feature-wrapper {
-    padding-top: 70px;
+    padding-top: 4.375rem;
     display: flex;
     justify-content: space-between;
 }
@@ -210,28 +202,28 @@ header .presentation .hero-shop-button:hover {
 .feature img {
     display: block;
     margin: 0 auto;
-    max-height: 149px;
+    max-height: 9.3125rem;
 }
 
 .feature-title {
     font-weight: 600;
-    padding: 10px 0;
+    padding: 0.625rem 0;
 }
 
 .feature-description {
-    padding: 10px 0;
+    padding: 0.625rem 0;
 }
 
 .feature-button {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 0.625rem 1.25rem;
+    margin-top: 0.625rem;
     border-color: transparent;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     color: #fff;
     font-weight: 300;
     transition: .5s ease;
     background: #ff7800;
-    font: 16px 'Montserrat';
+    font: 1rem 'Montserrat';
 }
 
 .feature-button:hover {
@@ -244,15 +236,15 @@ header .presentation .hero-shop-button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 3.125rem;
 }
 
 .product {
     width: 30%;
-    border: 3px solid #f2f2f2;
-    border-radius: 10px;
+    border: 0.1875rem solid #f2f2f2;
+    border-radius: 0.625rem;
     cursor: pointer;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .product:hover .product-img-wrapper img {
@@ -264,7 +256,7 @@ header .presentation .hero-shop-button:hover {
 }
 
 .product .product-img-wrapper {
-    height: 250px;
+    height: 15.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,28 +270,28 @@ header .presentation .hero-shop-button:hover {
 }
 
 .product-title {
-    padding: 10px 0;
+    padding: 0.625rem 0;
     text-align: center;
-    border-top: 3px solid #f2f2f2;
+    border-top: 0.1875rem solid #f2f2f2;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .product-price {
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
 }
 
 .view-products {
-    padding: 10px 20px;
-    font: 16px 'Montserrat';
+    padding: 0.625rem 1.25rem;
+    font: 1rem 'Montserrat';
     color: #fff;
-    border: 1px solid #fff;
+    border: 0.0625rem solid #fff;
     background-color: #ff7800;
     transition: .5s ease;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     display: block;
-    margin: 30px auto 100px auto;
+    margin: 1.875rem auto 6.25rem auto;
     cursor: pointer;
 }
 
@@ -313,7 +305,7 @@ header .presentation .hero-shop-button:hover {
     align-items: center;
     height: auto;
     transition: .5s ease;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
 }
 
 .categories-carousel {
@@ -326,11 +318,11 @@ header .presentation .hero-shop-button:hover {
 .categories-carousel div {
     display: inline-block;
     background: #f2f2f2;
-    border-radius: 50px;
-    padding: 10px 20px;
-    margin-right: 15px;
+    border-radius: 3.125rem;
+    padding: 0.625rem 1.25rem;
+    margin-right: 0.9375rem;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 0.0625rem solid transparent;
     transition: .5s ease;
 }
 
@@ -341,43 +333,43 @@ header .presentation .hero-shop-button:hover {
 
 .categories .scroller {
     position: absolute;
-    border: 1px #f2f2f2 solid;
+    border: 0.0625rem #f2f2f2 solid;
     cursor: pointer;
     right: -2.5rem;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     background: #f2f2f2;
-    border-radius: 50px;
+    border-radius: 3.125rem;
 }
 
 .reviews-wrapper {
-    padding: 100px 0;
+    padding: 6.25rem 0;
 }
 
 .reviews {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 3.125rem;
 }
 
 .review {
     width: 30%;
-    border: 3px solid #f2f2f2;
-    border-radius: 10px;
+    border: 0.1875rem solid #f2f2f2;
+    border-radius: 0.625rem;
     cursor: pointer;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .review img {
     border-radius: 50%;
     display: block;
-    margin: 40px auto;
-    max-width: 150px;
-    max-height: 150px;
+    margin: 2.5rem auto;
+    max-width: 9.375rem;
+    max-height: 9.375rem;
 }
 
 .review .review-comment {
-    padding: 20px 10px;
+    padding: 1.25rem 0.625rem;
     text-align: center;
 }
 
@@ -385,7 +377,7 @@ header .presentation .hero-shop-button:hover {
     color: #ff7800;
     display: flex;
     justify-content: center;
-    padding: 20px 0 40PX 0;
+    padding: 1.25rem 0 40PX 0;
 }
 
 main {
@@ -395,18 +387,18 @@ main {
 
 main .item {
     width: 95%;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
     overflow: hidden;
     position: relative;
-    padding-bottom: 20px;
-    border: 3px solid #f2f2f2;
-    border-radius: 10px;
+    padding-bottom: 1.25rem;
+    border: 0.1875rem solid #f2f2f2;
+    border-radius: 0.625rem;
 }
 
 main .item h2 {
-    border-top: 3px solid #f2f2f2;
+    border-top: 0.1875rem solid #f2f2f2;
     color: #333;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
 }
 
 main .item:not(:last-child) {
@@ -415,7 +407,7 @@ main .item:not(:last-child) {
 
 main .item img {
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0.625rem 0.625rem 0 0;
     transition: .5s ease;
 }
 
@@ -424,7 +416,7 @@ main .item img:hover {
 }
 
 main p, main b {
-    margin: 10px 20px;
+    margin: 0.625rem 1.25rem;
     color: #333;
 }
 
@@ -434,13 +426,13 @@ main b {
 
 main .add-to-cart {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    right: 1.25rem;
+    bottom: 1.25rem;
     background: #ff7800;
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
     text-align: center;
-    line-height: 35px;
+    line-height: 2.1875rem;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -449,7 +441,7 @@ main .add-to-cart {
 }
 
 main .add-to-cart:hover {
-    transform: scale(1.5) translateY(-5px);
+    transform: scale(1.5) translateY(-0.3125rem);
 }
 
 
@@ -464,19 +456,19 @@ ul {
 }
 
 .footer {
-    padding: 70px 0;
+    padding: 4.375rem 0;
 }
 
 .footer-col {
     width: 25%;
-    padding: 0 15px;
+    padding: 0 0.9375rem;
 }
 
 .footer-col h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #222;
     text-transform: capitalize;
-    margin-bottom: 35px;
+    margin-bottom: 2.1875rem;
     font-weight: 500;
     position: relative;
 }
@@ -485,19 +477,19 @@ ul {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -10px;
+    bottom: -0.625rem;
     background-color: #ff7800;
-    height: 2px;
+    height: 0.125rem;
     box-sizing: border-box;
-    width: 50px;
+    width: 3.125rem;
 }
 
 .footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .footer-col ul li a {
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: capitalize;
     color: #222;
     text-decoration: none;
@@ -509,17 +501,17 @@ ul {
 
 .footer-col ul li a:hover {
     color: #24262b;
-    padding-left: 8px;
+    padding-left: 0.5rem;
 }
 
 .footer-col .social-links a {
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 0 0.625rem 0.625rem 0;
     text-align: center;
-    line-height: 40px;
+    line-height: 2.5rem;
     border-radius: 50%;
     color: #222;
     transition: all 0.5s ease;
@@ -560,17 +552,17 @@ ul {
 
 section.left .contactTitle h2 {
     position: relative;
-    font-size: 28px;
+    font-size: 1.75rem;
     color: #222;
     display: inline-block;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
 }
 
 section.left .contactTitle h2::before {
     content: '';
     position: absolute;
     width: 50%;
-    height: 1px;
+    height: 0.0625rem;
     /* background-color: #888; */
     top: 120%;
     left: 0;
@@ -580,41 +572,41 @@ section.left .contactTitle h2::after {
     content: '';
     position: absolute;
     width: 25%;
-    height: 3px;
+    height: 0.1875rem;
     background-color: #ff7800;
-    top: calc(120% - 1px);
+    top: calc(120% - 0.0625rem);
     left: 0;
 }
 
 section.left .contactTitle p {
-    font-size: 17px;
+    font-size: 1.0625rem;
     color: #222;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     line-height: 1.2;
-    padding-bottom: 22px;
+    padding-bottom: 1.375rem;
 }
 
 section.left .contactInfo {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .contactInfo .iconGroup {
     display: flex;
     align-items: center;
-    margin: 25px 0;
+    margin: 1.5625rem 0;
 }
 
 .iconGroup .icon {
-    width: 45px;
-    height: 45px;
-    border: 2px solid #ff7800;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border: 0.125rem solid #ff7800;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 1.25rem;
     position: relative;
 }
 
 .iconGroup .icon svg {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #222;
     position: absolute;
     top: 50%;
@@ -625,7 +617,7 @@ section.left .contactInfo {
 .iconGroup .contacts-details span {
     display: block;
     color: #222;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .iconGroup .contacts-details span:nth-child(1) {
@@ -638,7 +630,7 @@ section.left .socialMedia {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    margin: 22px 0 20px;
+    margin: 1.375rem 0 1.25rem;
 }
 
 .socialMedia a {
@@ -646,19 +638,19 @@ section.left .socialMedia {
     height: 35px; */
     text-decoration: none;
     text-align: center;
-    margin-right: 15px;
-    border-radius: 5px;
+    margin-right: 0.9375rem;
+    border-radius: 0.3125rem;
     background-color: #ff7800;
     transition: 0.4s;
 }
 
 .socialMedia a svg {
     color: #222;
-    font-size: 18px;
-    line-height: 35px;
-    border: 1px solid transparent;
+    font-size: 1.125rem;
+    line-height: 2.1875rem;
+    border: 0.0625rem solid transparent;
     transition-delay: 0.4s;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 /* Code for the right section (column) */
@@ -667,11 +659,11 @@ section.left .socialMedia {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 1.875rem;
 }
 
 .contacts-row section.right .inputGroup {
-    margin: 18px 0px;
+    margin: 1.125rem 0;
     position: relative;
 }
 
@@ -685,73 +677,73 @@ section.left .socialMedia {
 
 .messageForm input, .messageForm textarea {
     width: 100%;
-    font-size: 18px;
-    padding: 2px 0px;
+    font-size: 1.125rem;
+    padding: 0.125rem 0;
     /* background-color: #2e2e2e; */
     color: #222;
     border: none;
-    border-bottom: 2px solid #222;
+    border-bottom: 0.125rem solid #222;
     outline: none;
 }
 
 .messageForm textarea {
     resize: none;
-    height: 220px;
+    height: 13.75rem;
     display: block;
 }
 
 textarea::-webkit-scrollbar {
-    width: 5px;
+    width: 0.3125rem;
 }
 
 textarea::-webkit-scrollbar-track {
     /* background-color: #1e1e1e; */
-    border-radius: 15px;
+    border-radius: 0.9375rem;
 }
 
 textarea::-webkit-scrollbar-thumb {
     background-color: #ff7800;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
 }
 
 .inputGroup label {
     position: absolute;
     left: 0;
-    bottom: 4px;
+    bottom: 0.25rem;
     color: #222;
-    font-size: 18px;
+    font-size: 1.125rem;
     transition: 0.4s;
     pointer-events: none;
 }
 
 .inputGroup:nth-child(4) label {
-    top: 2px;
+    top: 0.125rem;
 }
 
 .inputGroup input:focus ~ label, .inputGroup textarea:focus ~ label,
 .inputGroup input:valid ~ label, .inputGroup textarea:valid ~ label {
-    transform: translateY(-30px);
-    font-size: 16px;
+    transform: translateY(-1.875rem);
+    font-size: 1rem;
 }
 
 .inputGroup button {
-    padding: 8px 16px;
-    font-size: 18px;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
     background-color: #ff7800;
     color: #222;
-    border: 1px solid transparent;
-    border-radius: 25px;
+    border: 0.0625rem solid transparent;
+    border-radius: 1.5625rem;
     outline: none;
     cursor: pointer;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.3);
     transition: 0.4s;
 }
 
 .inputGroup button:hover {
     /* background-color: #2e2e2e; */
     color: #ff7800;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid dodgerblue;
+    box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.3);
+    border: 0.0625rem solid dodgerblue;
 }
 
 @media (max-width: 1100px) {
@@ -767,17 +759,17 @@ textarea::-webkit-scrollbar-thumb {
 
     .contacts-row section.left, .contacts-row section.right {
         flex-basis: 100%;
-        margin: 0px;
+        margin: 0;
     }
 }
 
 /* All Products Section*/
 .allProducts-wrapper .categories {
-    padding-top: 20px;
+    padding-top: 1.25rem;
 }
 
 .allProducts-wrapper main {
-    padding-top: 20px;
+    padding-top: 1.25rem;
 }
 
 /* Authorization, Login, Signin, Signup, Registration page */
@@ -790,24 +782,24 @@ textarea::-webkit-scrollbar-thumb {
 
 .auth-form-outer {
     /*border: 3px solid #ff7800;*/
-    border-radius: 50px;
+    border-radius: 3.125rem;
     width: 100%;
     background-color: transparent;
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(0.5625rem);
 }
 
 .auth-form-wrapper {
-    padding: 100px 400px;
+    padding: 6.25rem 25rem;
 }
 
 .auth-form-wrapper .header__primary {
-    font-size: 25px;
-    padding-bottom: 30px;
+    font-size: 1.5625rem;
+    padding-bottom: 1.875rem;
     font-weight: normal;
 }
 
 .auth-inputBox {
-    margin-top: 30px;
+    margin-top: 1.875rem;
     position: relative;
 }
 
@@ -815,9 +807,9 @@ textarea::-webkit-scrollbar-thumb {
     width: 100%;
     position: relative;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     outline: none;
-    font: 20px 'Montserrat';
+    font: 1.25rem 'Montserrat';
     border: none;
     z-index: 1;
     transition: .7s ease;
@@ -826,27 +818,27 @@ textarea::-webkit-scrollbar-thumb {
 .auth-inputBox span {
     position: absolute;
     left: 0;
-    top: 10px;
-    font-size: 17px;
+    top: 0.625rem;
+    font-size: 1.0625rem;
     transition: .5s ease;
     pointer-events: none;
 }
 
 .auth-inputBox .active {
-    font-size: 10px;
-    top: -10px;
-    left: 15px;
+    font-size: 0.625rem;
+    top: -0.625rem;
+    left: 0.9375rem;
 }
 
 .auth-inputBox i {
     width: 100%;
     background-color: #ff7800;
-    height: 3px;
+    height: 0.1875rem;
     position: absolute;
     left: 0;
     bottom: 0;
     transition: .5s ease;
-    border-radius: 50px;
+    border-radius: 3.125rem;
 }
 
 .auth-inputBox input:focus {
@@ -854,19 +846,19 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .auth-inputBox input:focus + span {
-    font-size: 10px;
-    top: -10px;
-    left: 15px;
+    font-size: 0.625rem;
+    top: -0.625rem;
+    left: 0.9375rem;
 }
 
 .auth-inputBox input:focus ~ i {
-    height: 40px;
+    height: 2.5rem;
 }
 
 .auth-links {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
 .auth-links a {
@@ -881,13 +873,13 @@ textarea::-webkit-scrollbar-thumb {
 .auth-form-wrapper .log-submit {
     display: block;
     width: 100%;
-    padding: 15px 0;
+    padding: 0.9375rem 0;
     background-color: #ff7800;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     font-weight: 400;
-    font: 16px 'Montserrat';
+    font: 1rem 'Montserrat';
     border: none;
-    margin: 40px auto 20px auto;
+    margin: 2.5rem auto 1.25rem auto;
     cursor: pointer;
 }
 
@@ -926,7 +918,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .admin-nav ul li:not(:last-child) {
-    margin-right: 25px;
+    margin-right: 1.5625rem;
 }
 
 /* User */
@@ -938,7 +930,7 @@ textarea::-webkit-scrollbar-thumb {
     background-color: #f2f2f2;
 }
 .user {
-    padding: 10px;
+    padding: 0.625rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -946,11 +938,11 @@ textarea::-webkit-scrollbar-thumb {
 
 .user input {
     background-color: transparent;
-    border: 1px solid transparent;
-    padding: 3px;
-    font: 14px 'Montserrat';
+    border: 0.0625rem solid transparent;
+    padding: 0.1875rem;
+    font: 0.875rem 'Montserrat';
     outline: none;
-    width: 150px;
+    width: 9.375rem;
 }
 
 .user div {
@@ -960,8 +952,8 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .user .edit {
-    border: 1px solid #222;
-    font: 14px 'Montserrat';
+    border: 0.0625rem solid #222;
+    font: 0.875rem 'Montserrat';
     outline: none;
 }
 
@@ -985,14 +977,14 @@ textarea::-webkit-scrollbar-thumb {
 
 .add-product {
     float: right;
-    padding: 15px;
+    padding: 0.9375rem;
     color: #fff;
     background-color: #ff7800;
-    border-radius: 50px;
-    margin-bottom: 20px;
+    border-radius: 3.125rem;
+    margin-bottom: 1.25rem;
     cursor: pointer;
     transition: .5s ease;
-    border: 3px solid transparent;
+    border: 0.1875rem solid transparent;
 }
 
 .add-product:hover {
@@ -1008,7 +1000,7 @@ textarea::-webkit-scrollbar-thumb {
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: #ff7800;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     border: #fff 0 solid;
 }
 
@@ -1022,7 +1014,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .modal-content {
-    padding: 100px 100px;
+    padding: 6.25rem 6.25rem;
 }
 
 .modal-content .header__primary {
@@ -1032,45 +1024,45 @@ textarea::-webkit-scrollbar-thumb {
 .modal-btn-wrapper {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .modal-btn-wrapper button {
-    padding: 15px 40px;
-    border-radius: 50px;
+    padding: 0.9375rem 2.5rem;
+    border-radius: 3.125rem;
     border: #fff 0 solid;
     color: #222222;
     cursor: pointer;
-    font: 14px 'Montserrat';
+    font: 0.875rem 'Montserrat';
 }
 
 .product-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
 }
 
 .product-details input {
-    padding: 15px;
-    border-radius: 50px;
+    padding: 0.9375rem;
+    border-radius: 3.125rem;
     border: none;
-    font: 15px 'Montserrat';
-    margin-bottom: 10px;
+    font: 0.9375rem 'Montserrat';
+    margin-bottom: 0.625rem;
     outline: none;
 }
 
 .create-product button{
     width: 100%;
-    padding: 15px 0;
-    margin-top: 5px;
+    padding: 0.9375rem 0;
+    margin-top: 0.3125rem;
 }
 
 .create-product svg {
     float: right;
     position: relative;
-    top: 15px;
-    right: 15px;
+    top: 0.9375rem;
+    right: 0.9375rem;
     color: #fff;
     cursor: pointer;
 }
@@ -1086,47 +1078,47 @@ textarea::-webkit-scrollbar-thumb {
     height: 45%;
     border-radius: 50%;
     display: block;
-    margin: 100px auto 0 auto;
+    margin: 6.25rem auto 0 auto;
 }
 
 .profile-name .header__primary {
-    font: 25px 'Montserrat';
+    font: 1.5625rem 'Montserrat';
     font-weight: 600;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 1.25rem;
 }
 
 .profile-email {
     color: #222222;
     text-align: center;
-    font: 20px 'Montserrat';
-    margin: 30px 0;
+    font: 1.25rem 'Montserrat';
+    margin: 1.875rem 0;
 }
 
 .profile-phone {
     color: #222222;
     text-align: center;
-    font: 20px 'Montserrat';
+    font: 1.25rem 'Montserrat';
 }
 
 .search-bar {
     display: flex;
-    padding-top: 100px;
+    padding-top: 6.25rem;
 }
 
 .search-bar p {
-    margin-right: 50px;
+    margin-right: 3.125rem;
 }
 
 .search-bar input {
     background-color: #f2f2f2;
     border: none;
     outline: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font: 16px 'Montserrat';
+    padding: 0.625rem 1.25rem;
+    border-radius: 3.125rem;
+    font: 1rem 'Montserrat';
 }
 
 .categories p {
-    margin-right: 100px;
+    margin-right: 6.25rem;
 }
